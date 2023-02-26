@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slumpa färger</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="shuffle.css" />
+  </head>
+  <body style="font-family: RobotoSlab, sans-serif">
+    <!--NAVBAR-->
+    <nav style="font-family: RobotoSlab, sans-serif" class="navContainer">
+      <ul id="navbar">
+        <li>
+          <div class="menu">
+            <a href="index.html" id="homeLink">
+              <img src="lightblueS.png" alt="ljusblå färgklutt" />
+              <div id="navHomepage"><p class="menuText">HEM</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="shuffle.html">
+              <img src="rosaS.png" alt="rosa färgklutt" />
+              <div id="navShufflepage">
+                <p class="menuText">FÄRGER</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="img.html">
+              <img src="rosarundS.png" alt="rosa färgklutt" />
+
+              <div id="navContactpage"><p class="menuText">BILDER</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="cities.html">
+              <img src="greenS.png" alt="grön färgklutt" />
+
+              <div id="navCitiespage"><p class="menuText">CITIES</p></div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <!--SLUMPA FÄRGKODER-->
+    <h1>Slumpa fram färgkoder</h1>
+    <p id="shufflatText">Shufflat!</p>
+    <form class="checkBoxesColorCode">
+      <div id="checkBoxesDiv">
+        <label>
+          <input class="checkboxes" type="checkbox" id="hex" value="HEX" />
+          HEX
+        </label>
+        <label>
+          <input class="checkboxes" type="checkbox" id="rgb" value="RGB" />
+          RGB
+        </label>
+        <label>
+          <input class="checkboxes" type="checkbox" id="hsl" value="HSL" />
+          HSL
+        </label>
+      </div>
+      <div id="buttonsDiv">
+        <button
+          style="font-family: RobotoSlab, sans-serif"
+          id="shuffleButton"
+          type="button"
+          value="Shuffle"
+        >
+          Slumpa
+        </button>
+
+        <button
+          type="button"
+          id="localStorageButton"
+          style="font-family: RobotoSlab, sans-serif"
+        >
+          Visa tidigare sökta färger
+        </button>
+
+        <button
+          id="hideLocalStorageButton"
+          style="font-family: RobotoSlab, sans-serif"
+        >
+          Dölj tidigare färger
+        </button>
+      </div>
+    </form>
+
+    <button id="decreaseButton" style="font-family: RobotoSlab, sans-serif">
+      Komprimera listan
+    </button>
+    <div id="listContainer">
+      <ul id="shuffleList"></ul>
+      <ul id="localStoreList"></ul>
+    </div>
+
+    <div id="buttonContainer">
+      <button id="resetButton" style="font-family: RobotoSlab, sans-serif">
+        Ångra senaste
+      </button>
+      <button id="resetAllButton" style="font-family: RobotoSlab, sans-serif">
+        Ångra allt
+      </button>
+    </div>
+
+    <!--TA FRAM NYANSER-->
+
+    <form action="">
+      <label id="shadeContainer">
+        <h2>Har du redan en färg?</h2>
+        <h3>Skriv den här, och få fram nya nyanser!</h3>
+        <input
+          id="textbox"
+          class="inputColorShade"
+          type="text"
+          placeholder="Skriv en färg..."
+        />
+
+        <h4>Vill du även se bilder i vald färg?</h4>
+        <div>
+          <select name="Antal bilder" id="imgAmount">
+            <option value="Välj antal">Välj antal</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+          <button
+            style="font-family: RobotoSlab, sans-serif"
+            id="colorShadeButton"
+            type="button"
+          >
+            Välj
+          </button>
+        </div>
+        <div id="resetButtonsContainer">
+          <button id="resetShade" style="font-family: RobotoSlab, sans-serif">
+            Rensa allt
+          </button>
+
+          <button id="imgClear" style="font-family: RobotoSlab, sans-serif">
+            Rensa enbart bilder
+          </button>
+          <button style="font-family: RobotoSlab, sans-serif" id="storeButton">
+            Visa tidigare sökta färger
+          </button>
+        </div>
+      </label>
+
+      <p id="shadeError">Tyvärr, färgen du valt finns inte. Prova en annan!</p>
+    </form>
+
+    <div id="shadeDisplayContainer">
+      <div>
+        <ul id="storeList"></ul>
+        <ol id="shuffleColor"></ol>
+      </div>
+
+      <div id="canvasChart">
+        <canvas id="myChart" width="200" height="200"></canvas>
+      </div>
+    </div>
+
+    <!--Container till bilderna-->
+    <div id="container"></div>
+
+    <!--För att komma till toppen av sidan-->
+
+    <button id="uparrow">
+      <img
+        src="up_arrow.png"
+        alt="up-arrow to get back to the top of the page"
+      />
+    </button>
+
+    <footer>
+      <h4 class="sr-only">Sociala medie länkar</h4>
+
+      <!--SOCIALA MEDIER LOGGOS MED LÄNKAR-->
+      <div class="socialmedia-img">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img
+            src="facebook.png"
+            id="facebook-img"
+            alt="facebook logo"
+            width="50%"
+          />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            src="instagram.png"
+            id="instagram-img"
+            alt="instagram logo"
+            width="50%"
+          />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+          <img src="tiktok.png" id="tiktok-img" alt="tiktok logo" width="50%" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="shuffle.js"></script>
+  </body>
+</html>

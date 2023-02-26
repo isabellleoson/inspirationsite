@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cities</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="cities.css" />
+  </head>
+  <body style="font-family: RobotoSlab, sans-serif">
+    <nav style="font-family: RobotoSlab, sans-serif" class="navContainer">
+      <ul id="navbar">
+        <li>
+          <div class="menu">
+            <a href="index.html" id="homeLink">
+              <img src="lightblueS.png" alt="ljusblå färgklutt" />
+              <div id="navHomepage"><p class="menuText">HEM</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="shuffle.html">
+              <img src="rosaS.png" alt="rosa färgklutt" />
+              <div id="navShufflepage">
+                <p class="menuText">SLUMPA FÄRGER</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="img.html">
+              <img src="rosarundS.png" alt="rosa färgklutt" />
+
+              <div id="navContactpage"><p class="menuText">BILDER</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="cities.html">
+              <img src="greenS.png" alt="grön färgklutt" />
+
+              <div id="navCitiespage"><p class="menuText">CITIES</p></div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <main>
+      <form>
+        <label id="citiesContainer">
+          <div id="seeCities">
+            <fieldset>
+              <legend>Vill du se aktuella städer?</legend>
+
+              <input
+                type="radio"
+                name="displayCities"
+                class="radioDisplay"
+                id="radioButtonYes"
+                checked
+              />
+              Ja, tack.
+              <input
+                type="radio"
+                name="displayCities"
+                class="radioDisplay"
+                id="radioButtonNo"
+              />
+              Nope!
+              <button
+                style="font-family: RobotoSlab, sans-serif"
+                id="displayCitiesButton"
+              >
+                välj
+              </button>
+              <table id="citiesList">
+                <tr>
+                  <th id="tdStad">Stad</th>
+                  <th id="tdPopulation">Population</th>
+                  <th id="tdID">ID</th>
+                </tr>
+              </table>
+            </fieldset>
+          </div>
+        </label>
+      </form>
+
+      <form>
+        <p id="pText">
+          Om du vill redigera eller radera en stad så behöver du först skriva in
+          ID:t. Vill du däremot lägga till en stad så behövs inget ID.
+        </p>
+        <label for="">
+          <input
+            class="textboxesCities"
+            id="textboxID"
+            type="text"
+            placeholder="  Skriv in ett id..."
+          />
+        </label>
+        <label for="">
+          <input
+            class="textboxesCities"
+            id="textboxCities"
+            type="text"
+            placeholder="  Skriv in en stad..."
+          />
+        </label>
+        <label for="">
+          <input
+            class="textboxesCities"
+            id="textboxPopulation"
+            type="text"
+            placeholder="  Skriv in population..."
+          />
+        </label>
+
+        <div id="radiobuttonsContainer">
+          <label for="">
+            <input
+              class="radioCities"
+              id="addCityAndPopulation"
+              type="radio"
+              name="radio"
+              value="Lägg till"
+            />
+            Lägg till
+          </label>
+          <label for="">
+            <input
+              class="radioCities"
+              id="deleteCity"
+              type="radio"
+              name="radio"
+              value="Radera"
+            />
+            Radera
+          </label>
+          <label for="">
+            <input
+              class="radioCities"
+              id="changeCity"
+              type="radio"
+              name="radio"
+              value="Redigera"
+            />
+            Redigera
+          </label>
+
+          <button style="font-family: RobotoSlab, sans-serif" id="citiesButton">
+            Skicka
+          </button>
+        </div>
+      </form>
+
+      <ol id="citiesListTry"></ol>
+
+      <!--För att komma till toppen av sidan-->
+
+      <button id="uparrow">
+        <img
+          src="up_arrow.png"
+          alt="up-arrow to get back to the top of the page"
+        />
+      </button>
+
+      <!-- <p class="error">Värde saknas</p> -->
+      <footer>
+        <h4 class="sr-only">Sociala medie länkar</h4>
+        <!--SOCIALA MEDIER LOGGOS MED LÄNKAR-->
+        <div class="socialmedia-img">
+          <a href="https://www.facebook.com/" target="_blank">
+            <img
+              src="facebook.png"
+              id="facebook-img"
+              alt="facebook logo"
+              width="50%"
+            />
+          </a>
+          <a href="https://www.instagram.com/" target="_blank">
+            <img
+              src="instagram.png"
+              id="instagram-img"
+              alt="instagram logo"
+              width="50%"
+            />
+          </a>
+          <a href="https://www.tiktok.com/" target="_blank">
+            <img
+              src="tiktok.png"
+              id="tiktok-img"
+              alt="tiktok logo"
+              width="50%"
+            />
+          </a>
+        </div>
+      </footer>
+    </main>
+    <script src="cities.js"></script>
+  </body>
+</html>

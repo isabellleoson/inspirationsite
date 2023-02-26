@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(pinkpaint.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 1300px;
+}
+
+h1 {
+  font-size: 40px;
+  margin-left: 550px;
+}
+
+h2 {
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+#shufflatText {
+  font-size: 30px;
+  font-weight: bold;
+  margin-left: 700px;
+}
+
+.checkBoxesColorCode {
+  align-items: center;
+  box-shadow: 0 1px 8px 0;
+  display: flex;
+  flex-direction: column;
+  margin-left: 250px;
+  margin-right: 250px;
+  justify-content: center;
+  background-color: rgba(244, 234, 235, 0.5);
+  padding: 20px;
+  max-width: 100%;
+}
+
+#checkBoxesDiv {
+  display: flex;
+  padding: 20px;
+}
+
+#buttonsDiv {
+  display: flex;
+  padding: 10px;
+}
+
+.checkboxes {
+  box-shadow: 0 1px 2px 0;
+  border: solid 2px black;
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+#localStorageButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+#hideLocalStorageButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+#decreaseButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  width: 130px;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 280px;
+}
+
+#resetButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  width: auto;
+  margin-bottom: 50px;
+  padding: 10px;
+  margin-left: 670px;
+}
+
+#resetAllButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin-bottom: 50px;
+  margin-left: 20px;
+  padding: 10px;
+  width: auto;
+}
+
+#buttonContainer {
+  display: flex;
+}
+
+#shuffleButton {
+  box-shadow: 0 0 2px 0;
+  width: auto;
+  margin: 10px;
+  padding: 10px;
+}
+
+#listContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shuffleList {
+  width: 450px;
+}
+
+#localStoreList {
+  width: 450px;
+}
+
+li {
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  font-size: 20px;
+  display: flex;
+  padding: 5px;
+  box-shadow: 0, 1px, 5px, 0;
+}
+
+#shadeContainer {
+  align-items: center;
+  box-shadow: 0 0 5px 0;
+  background-color: rgba(244, 234, 235, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+
+.inputColorShade {
+  background-color: #fff2f6;
+  box-shadow: 0, 1px, 5px, 0;
+  max-width: 100%;
+  position: relative;
+  height: 50px;
+  width: 300px;
+}
+
+#imgAmount {
+  box-shadow: 0 0 2px 0;
+  background-color: #f0d9e0;
+  height: 40px;
+  width: 100px;
+}
+
+#colorShadeButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+#resetShade {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+#imgClear {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+#storeButton {
+  box-shadow: 0 0 2px 0;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+/*För bilderna*/
+#container {
+  background-color: rgba(244, 234, 235, 0.5);
+  border-radius: 10px;
+  padding: 30px;
+  margin-top: 200px;
+  margin-bottom: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  box-shadow: 0 1px 10px 0;
+}
+
+.img {
+  margin-left: 350px;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px 0;
+  cursor: pointer;
+  width: 40%;
+}
+
+.pText {
+  font-size: 25px;
+  margin-left: 350px;
+}
+
+#error {
+  font-size: 40px;
+}
+
+#shadeError {
+  font-size: 20px;
+  margin-left: 300px;
+}
+
+#shadeDisplayContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#canvasChart {
+  width: 30%;
+  height: 30%;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#shuffleColor {
+  width: 420px;
+}
+
+#storeList {
+  width: 420px;
+}
+
+#uparrow {
+  display: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  opacity: 0.7;
+  border: none;
+  cursor: pointer;
+}
+
+#uparrow:hover {
+  transform: scale(1.1);
+}

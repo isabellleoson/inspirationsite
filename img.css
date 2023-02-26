@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(pinkpaint.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+  margin-left: 650px;
+  color: rgba(31, 21, 21, 0.8);
+}
+
+h2 {
+  font-size: 30px;
+  margin-left: 210px;
+  color: rgba(31, 21, 21, 0.8);
+}
+
+.img {
+  border-radius: 5px;
+  box-shadow: 0 1px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin-left: 380px;
+  margin-bottom: 30px;
+  margin-top: 70px;
+  cursor: pointer;
+}
+
+.text {
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(238, 239, 237, 0.5);
+  color: rgba(31, 21, 21, 0.9);
+  box-shadow: 0 0 5px 0;
+  padding: 1px;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.jsP {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 80px;
+}
+
+input {
+  border: 1px solid #ddd;
+  box-shadow: 0 1px 5px 0;
+  background-color: rgba(244, 234, 235, 0.5);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 100%;
+  font-size: 18px;
+  margin: 10px;
+}
+
+form {
+  align-items: center;
+  justify-content: center;
+  margin-left: 400px;
+  margin-right: 400px;
+  background-color: rgba(244, 234, 235, 0.5);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 7px 0;
+  padding: 20px;
+  padding-right: 40px;
+}
+
+#amountImg {
+  box-shadow: 0 0 2px 0;
+  font-size: 15px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: auto;
+}
+
+#searchImg {
+  box-shadow: 0 0 5px 0;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  width: 400px;
+}
+
+#searchImg:hover {
+  width: 403px;
+  box-shadow: 0 0 8px 0;
+}
+
+#searchButton {
+  box-shadow: 0 1px 3px 0;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  width: 150px;
+  margin: 10px;
+}
+
+#imgResetButton {
+  padding: 10px;
+  font-size: 20px;
+  box-shadow: 0 1px 3px 0;
+  cursor: pointer;
+  width: 150px;
+  margin: 10px;
+}
+#searchButton:hover {
+  font-size: 21px;
+}
+#imgResetButton:hover {
+  font-size: 21px;
+}
+button:hover {
+  font-size: 21px;
+}
+.buttons {
+  align-items: center;
+  box-shadow: 0 1px 3px 0;
+  font-size: 20px;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  height: 30px;
+  width: 20%;
+  margin-left: 600px;
+  margin-bottom: 20px;
+}
+
+#uparrow {
+  display: none;
+  background-color: transparent;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  opacity: 0.7;
+  border: none;
+  cursor: pointer;
+}
+
+#uparrow:hover {
+  transform: scale(1.1);
+}

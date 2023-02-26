@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilder</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link rel="stylesheet" href="img.css" />
+  </head>
+  <body style="font-family: RobotoSlab, sans-serif">
+    <nav style="font-family: RobotoSlab, sans-serif" class="navContainer">
+      <ul id="navbar">
+        <li>
+          <div class="menu">
+            <a href="index.html" id="homeLink">
+              <img src="lightblueS.png" alt="ljusblå färgklutt" />
+              <div id="navHomepage"><p class="menuText">HEM</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="shuffle.html">
+              <img src="rosaS.png" alt="rosa färgklutt" />
+              <div id="navShufflepage">
+                <p class="menuText">FÄRGER</p>
+              </div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="img.html">
+              <img src="rosarundS.png" alt="rosa färgklutt" />
+
+              <div id="navContactpage"><p class="menuText">BILDER</p></div>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="menu">
+            <a href="cities.html">
+              <img src="greenS.png" alt="grön färgklutt" />
+
+              <div id="navCitiespage"><p class="menuText">CITIES</p></div>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <h1>Sök bilder!</h1>
+    <h2>
+      Skriv ditt sökord (helst på engelska) i första fältet. Ange sedan antal
+      bilder du vill se.
+    </h2>
+    <form id="form">
+      <div id="searchDiv">
+        <input type="text" placeholder="Sök..." id="searchImg" />
+
+        <select
+          name="Antal bilder"
+          id="amountImg"
+          style="font-family: RobotoSlab, sans-serif"
+        >
+          <option value="Välj antal">Välj antal bilder (valfritt)</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="30">30</option>
+          <option value="40">40</option>
+          <option value="50">50</option>
+          <option value="60">60</option>
+          <option value="70">70</option>
+          <option value="80">80</option>
+        </select>
+      </div>
+
+      <div id="buttonDiv">
+        <button id="searchButton" style="font-family: RobotoSlab, sans-serif">
+          Sök
+        </button>
+
+        <button id="imgResetButton" style="font-family: RobotoSlab, sans-serif">
+          Rensa Bilder
+        </button>
+      </div>
+    </form>
+    <div id="container"><ul id="ul"></ul></div>
+
+    <!--För att komma till toppen av sidan-->
+
+    <button id="uparrow">
+      <img
+        src="up_arrow.png"
+        alt="up-arrow to get back to the top of the page"
+      />
+    </button>
+
+    <footer>
+      <h4 class="sr-only">Sociala medie länkar</h4>
+
+      <!--SOCIALA MEDIER LOGGOS MED LÄNKAR-->
+      <div class="socialmedia-img">
+        <a href="https://www.facebook.com/" target="_blank">
+          <img
+            src="facebook.png"
+            id="facebook-img"
+            alt="facebook logo"
+            width="50%"
+          />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            src="instagram.png"
+            id="instagram-img"
+            alt="instagram logo"
+            width="50%"
+          />
+        </a>
+        <a href="https://www.tiktok.com/" target="_blank">
+          <img src="tiktok.png" id="tiktok-img" alt="tiktok logo" width="50%" />
+        </a>
+      </div>
+    </footer>
+
+    <script src="img.js"></script>
+  </body>
+</html>

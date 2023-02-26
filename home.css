@@ -1,0 +1,23 @@
+body {
+  background-image: url(pinkpaint.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: rgba(31, 21, 21, 0.9);
+  font-size: 60px;
+  margin-left: 800px;
+}
+
+#basicText {
+  color: rgba(31, 21, 21, 0.9);
+  font-size: 40px;
+  margin-left: 750px;
+  margin-right: 100px;
+}
